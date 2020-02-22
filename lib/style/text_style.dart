@@ -24,10 +24,10 @@ class CommonStyle {
     );
   }
 
-  static TextStyle strike() {
+  static TextStyle strike({Color color}) {
 
     return TextStyle(
-      color: Colors.black,
+      color: (color == null)?Colors.black:color,
       decoration: TextDecoration.lineThrough,
       fontSize: 40.0
     );

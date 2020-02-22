@@ -29,6 +29,7 @@ class _Slide02 extends State<Slide02> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
                         Text('- ARM code', style: CommonStyle.common(),),
+                        SizedBox(height: 15.0,),
                         Text('- Hot reload', style: CommonStyle.common(),),
                       ],
                     )

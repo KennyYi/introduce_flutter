@@ -33,20 +33,22 @@ class _Slide01 extends State<Slide01> {
                             Text("- Google's ", style: CommonStyle.common(),),
                             AnimatedDefaultTextStyle(
                               child: Text("mobile"), 
-                              style: (_animationIndex == 0)?CommonStyle.common():CommonStyle.strike(), 
+                              style: (_animationIndex == 0)?CommonStyle.common():CommonStyle.strike(color: Colors.deepOrangeAccent), 
                               duration: const Duration(milliseconds: 300)),
                             Text(" UI toolkit ", style: CommonStyle.common(),),
                           ],
                         ),
+                        SizedBox(height: 15.0,),
                         Row(
                           children: <Widget>[
                             Text("- Support iOS, Android", style: CommonStyle.common(),),
                             AnimatedDefaultTextStyle(
                               child: Text(", Web and Desktop"), 
-                              style: (_animationIndex < 2)?CommonStyle.transparent():CommonStyle.common(), 
+                              style: (_animationIndex < 2)?CommonStyle.transparent():CommonStyle.color(Colors.deepOrangeAccent), 
                               duration: const Duration(milliseconds: 300)),
                           ],
                         ),
+                        SizedBox(height: 15.0,),
                         Row(
                           children: <Widget>[
                             Text("- Programming language: ", style: CommonStyle.common(),),
@@ -56,6 +58,7 @@ class _Slide01 extends State<Slide01> {
                               duration: const Duration(milliseconds: 300)),
                           ],
                         ),
+                        SizedBox(height: 15.0,),
                         Row(
                           children: <Widget>[
                             Text("- Compiled to : ", style: CommonStyle.common(),),
@@ -65,6 +68,7 @@ class _Slide01 extends State<Slide01> {
                               duration: const Duration(milliseconds: 300)),
                           ],
                         ),
+                        SizedBox(height: 15.0,),
                         Text("- Free and Open source", style: CommonStyle.common(),),
                       ],
                     )
