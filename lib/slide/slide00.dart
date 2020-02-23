@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 
-class Slide00 extends StatelessWidget {
+class Slide00 extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() => _Slide00();
+}
+
+class _Slide00 extends State<Slide00> {
 
   @override
   Widget build(BuildContext context) {

@@ -17,7 +17,6 @@ class _Slide01 extends State<Slide01> {
       padding: EdgeInsets.all(10.0),
       child: Stack(
         children: <Widget>[
-          Text("Flutter?", style: CommonStyle.title(),),
           GestureDetector(
             child: Center(
               child: Row(
@@ -30,6 +29,7 @@ class _Slide01 extends State<Slide01> {
                       children: <Widget>[
                         Row(
                           children: <Widget>[
+                            // History??
                             Text("- Google's ", style: CommonStyle.common(),),
                             AnimatedDefaultTextStyle(
                               child: Text("mobile"), 
@@ -84,6 +84,7 @@ class _Slide01 extends State<Slide01> {
               setState(() => _animationIndex++);
             },
           ),
+          Text("Flutter?", style: CommonStyle.title(),),
         ],
       )
     );

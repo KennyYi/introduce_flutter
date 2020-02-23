@@ -17,29 +17,34 @@ class _Slide09 extends State<Slide09> {
       padding: EdgeInsets.all(10.0),
       child: Stack(
         children: <Widget>[
+
+          Center(
+            child: Offstage(
+              offstage: (_animationIndex != 1),
+              child: Image.asset('assets/2assists.jpg'),
+            ),
+          ),
+
           GestureDetector(
             child: Center(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  Text('Learning curve', style: (_animationIndex < 1)?CommonStyle.transparent():CommonStyle.common(),),
-                  SizedBox(height: 5.0),
-                  Text('  - Dart 2.0', style: (_animationIndex < 2)?CommonStyle.transparent():CommonStyle.common(),),
-                  SizedBox(height: 5.0),
-                  Text('  - 새로운 UI 구조', style: (_animationIndex < 3)?CommonStyle.transparent():CommonStyle.common(),),
+                  Text('- 든든한 뒷배 (Google)', style: (_animationIndex < 1)?CommonStyle.transparent():CommonStyle.common(),),
                   SizedBox(height: 15.0),
-                  Text('Echosystem', style: (_animationIndex < 4)?CommonStyle.transparent():CommonStyle.common(),),
-                  SizedBox(height: 5.0),
-                  Text('  - 약간씩 부족한 오픈소스 라이브러리', style: (_animationIndex < 5)?CommonStyle.transparent():CommonStyle.common(),),
-                  SizedBox(height: 5.0),
-                  Text('  - 모바일 외에는 아직 Beta', style: (_animationIndex < 6)?CommonStyle.transparent():CommonStyle.common(),),
-                  SizedBox(height: 5.0),
-                  Text('  - FFI, Desktop...', style: (_animationIndex < 6)?CommonStyle.transparent():CommonStyle.common(),),
+                  Text('- Dart Foreign Function Interface (FFI)', style: (_animationIndex < 2)?CommonStyle.transparent():CommonStyle.common(),),
                   SizedBox(height: 15.0),
-                  Text('결국에는 Native code 가 필요함', style: (_animationIndex < 7)?CommonStyle.transparent():CommonStyle.common(),),
+                  Text('- 개발자들 사이에서 폭풍 인기 몰이중', style: (_animationIndex < 3)?CommonStyle.transparent():CommonStyle.common(),),
+                  SizedBox(height: 5.0),
+                  Text('  - 2017 Stackoverflow survey 응답자의 61.4%가 뽑은 끔찍한(Dreaded) 언어 => Dart', style: (_animationIndex < 4)?CommonStyle.transparent():CommonStyle.color(Colors.grey),),
+                  Text('  - 2019 Stackoverflow survey 응답자의 66.3%가 뽑은 사랑하는(Loved) 언어 => Dart', style: (_animationIndex < 5)?CommonStyle.transparent():CommonStyle.color(Colors.deepOrangeAccent),),
+                  Text('  - 2019 Stackoverflow survey 응답자의 75.4%가 뽑은 사랑하는(Loved) 플랫폼 => Flutter', style: (_animationIndex < 6)?CommonStyle.transparent():CommonStyle.color(Colors.deepOrangeAccent),),
                   SizedBox(height: 15.0),
-                  Text('모바일 외의 다른 플랫폼까지 동시 지원하려면 복잡도가 상승', style: (_animationIndex < 8)?CommonStyle.transparent():CommonStyle.common(),),
+                  Text('- Multi platform', style: (_animationIndex < 7)?CommonStyle.transparent():CommonStyle.common(),),
+                  SizedBox(height: 5.0),
+                  Text('  - 사실 이 발표자료도 Flutter 로 만들었어요', style: (_animationIndex < 8)?CommonStyle.transparent():CommonStyle.color(Colors.deepOrangeAccent),),
+                  Text('  - https://github.com/KennyYi/introduce_flutter', style: (_animationIndex < 8)?CommonStyle.transparent():CommonStyle.color(Colors.blueAccent),),
                 ],
               )
             ),
@@ -47,7 +52,7 @@ class _Slide09 extends State<Slide09> {
               setState(() => _animationIndex++);
             },
           ),
-          Text("Cons", style: CommonStyle.title(),),
+          Text("Why Flutter?", style: CommonStyle.title(),),
         ],
       )
     );

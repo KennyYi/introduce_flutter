@@ -19,12 +19,12 @@ class Slide extends StatefulWidget {
 
 class _Slide extends State<Slide> {
 
-  int _index = 0;
+  PageController _pageController = PageController();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: getPage(),
+      body: _buildPageView(),
       floatingActionButton: Container(
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -46,20 +46,22 @@ class _Slide extends State<Slide> {
   }
 
   void backward(BuildContext context) {
-    if (_index > 0) {
-      setState(() => _index--);
-    }
+    // if (_index > 0) {
+    //   setState(() => _index--);
+    // }
+    _pageController.previousPage(duration: Duration(milliseconds: 500), curve: Curves.easeInOut);
   }
 
   void forward(BuildContext context) {
-    if (_index < 10) {
-      setState(() => _index++);
-    }
+    // if (_index < 10) {
+    //   setState(() => _index++);
+    // }
+    _pageController.nextPage(duration: Duration(milliseconds: 500), curve: Curves.easeInOut);
   }
 
-  Widget getPage() {
+  Widget _getPage(index) {
     
-    switch (_index) {
+    switch (index) {
       case 0: return Slide00();
       case 1: return Slide01();
       case 2: return Slide02();
@@ -68,10 +70,21 @@ class _Slide extends State<Slide> {
       case 5: return Slide05();
       case 6: return Slide06();
       case 7: return Slide07();
-      case 8: return Slide09();
-      case 9: return Slide08();
+      case 8: return Slide08();
+      case 9: return Slide09();
       case 10: return Slide10();
       default: return null;
     }
+  }
+
+  PageView _buildPageView() {
+    return PageView.builder(
+      itemBuilder: (context, index) {
+        return _getPage(index);
+      },
+      itemCount: 11,
+      controller: _pageController,
+
+    );
   }
 }
