@@ -15,7 +15,6 @@ class _Slide03 extends State<Slide03> {
       padding: EdgeInsets.all(10.0),
       child: Stack(
         children: <Widget>[
-          Text("Beautiful UI", style: CommonStyle.title(),),
           Center(
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -35,6 +34,7 @@ class _Slide03 extends State<Slide03> {
               ],
             )
           ),
+          Text("Beautiful UI", style: CommonStyle.title(),),
         ],
       )
     );

@@ -17,11 +17,11 @@ class _Slide04 extends State<Slide04> {
       padding: EdgeInsets.all(10.0),
       child: Stack(
         children: <Widget>[
-          Text("Architecture", style: CommonStyle.title(),),
           GestureDetector(
             child: Center(child: Image.asset('assets/architecture.png')),
             onTap: () {setState(() => _animationIndex++);},
           ),
+          Text("Architecture", style: CommonStyle.title(),),
         ],
       )
     );

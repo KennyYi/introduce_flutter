@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 
 class CommonStyle {
 
-  static TextStyle title() {
+  static TextStyle title({Color color}) {
     return TextStyle(
-      color: Colors.blue[900],
+      color: (color == null)?Colors.blue[900]:color,
       fontSize: 80.0,
       fontWeight: FontWeight.bold
     );

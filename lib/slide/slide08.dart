@@ -17,7 +17,6 @@ class _Slide08 extends State<Slide08> {
       padding: EdgeInsets.all(10.0),
       child: Stack(
         children: <Widget>[
-          Text("Why Flutter?", style: CommonStyle.title(),),
 
           Center(
             child: Offstage(
@@ -41,6 +40,8 @@ class _Slide08 extends State<Slide08> {
                   Text('  - 2017 Stackoverflow survey 응답자의 61.4%가 뽑은 끔찍한(Dreaded) 언어 => Dart', style: (_animationIndex < 4)?CommonStyle.transparent():CommonStyle.color(Colors.grey),),
                   Text('  - 2019 Stackoverflow survey 응답자의 66.3%가 뽑은 사랑하는(Loved) 언어 => Dart', style: (_animationIndex < 5)?CommonStyle.transparent():CommonStyle.color(Colors.deepOrangeAccent),),
                   Text('  - 2019 Stackoverflow survey 응답자의 75.4%가 뽑은 사랑하는(Loved) 플랫폼 => Flutter', style: (_animationIndex < 6)?CommonStyle.transparent():CommonStyle.color(Colors.deepOrangeAccent),),
+                  SizedBox(height: 15.0),
+                  Text('- Multi platform', style: (_animationIndex < 7)?CommonStyle.transparent():CommonStyle.common(),),
                 ],
               )
             ),
@@ -48,6 +49,7 @@ class _Slide08 extends State<Slide08> {
               setState(() => _animationIndex++);
             },
           ),
+          Text("Why Flutter?", style: CommonStyle.title(),),
         ],
       )
     );

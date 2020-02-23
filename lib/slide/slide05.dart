@@ -15,8 +15,8 @@ class _Slide05 extends State<Slide05> {
       padding: EdgeInsets.all(10.0),
       child: Stack(
         children: <Widget>[
-          Text("Widget", style: CommonStyle.title()),
           Center(child: Image.asset('assets/widget_tree.jpg')),
+          Text("Widget", style: CommonStyle.title()),
         ],
       )
     );

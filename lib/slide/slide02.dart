@@ -17,7 +17,6 @@ class _Slide02 extends State<Slide02> {
       padding: EdgeInsets.all(10.0),
       child: Stack(
         children: <Widget>[
-          Text("Fast", style: CommonStyle.title(),),
           GestureDetector(
             child: Center(
               child: Row(
@@ -45,6 +44,7 @@ class _Slide02 extends State<Slide02> {
               setState(() => _animationIndex++);
             },
           ),
+          Text("Fast", style: CommonStyle.title(),),
         ],
       )
     );

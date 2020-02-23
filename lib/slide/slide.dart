@@ -9,6 +9,7 @@ import 'slide06.dart';
 import 'slide07.dart';
 import 'slide08.dart';
 import 'slide09.dart';
+import 'slide10.dart';
 
 class Slide extends StatefulWidget {
 
@@ -51,13 +52,13 @@ class _Slide extends State<Slide> {
   }
 
   void forward(BuildContext context) {
-    if (_index < 9) {
+    if (_index < 10) {
       setState(() => _index++);
     }
   }
 
   Widget getPage() {
-
+    
     switch (_index) {
       case 0: return Slide00();
       case 1: return Slide01();
@@ -67,8 +68,9 @@ class _Slide extends State<Slide> {
       case 5: return Slide05();
       case 6: return Slide06();
       case 7: return Slide07();
-      case 8: return Slide08();
-      case 9: return Slide09();
+      case 8: return Slide09();
+      case 9: return Slide08();
+      case 10: return Slide10();
       default: return null;
     }
   }

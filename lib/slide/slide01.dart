@@ -43,7 +43,7 @@ class _Slide01 extends State<Slide01> {
                           children: <Widget>[
                             Text("- Support iOS, Android", style: CommonStyle.common(),),
                             AnimatedDefaultTextStyle(
-                              child: Text(", Web and Desktop"), 
+                              child: Text(", Web, Desktop (and Embedded)"), 
                               style: (_animationIndex < 2)?CommonStyle.transparent():CommonStyle.color(Colors.deepOrangeAccent), 
                               duration: const Duration(milliseconds: 300)),
                           ],
@@ -69,7 +69,7 @@ class _Slide01 extends State<Slide01> {
                           ],
                         ),
                         SizedBox(height: 15.0,),
-                        Text("- Free and Open source", style: CommonStyle.common(),),
+                        Text("- Free and Open source", style: (_animationIndex < 5)?CommonStyle.common():CommonStyle.color(Colors.deepOrangeAccent),),
                       ],
                     )
                   ),

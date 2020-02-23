@@ -15,7 +15,6 @@ class _Slide06 extends State<Slide06> {
       padding: EdgeInsets.all(10.0),
       child: Stack(
         children: <Widget>[
-          Text("Modern React Style", style: CommonStyle.title()),
           Center(
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -26,6 +25,7 @@ class _Slide06 extends State<Slide06> {
               ],
             )
           ),
+          Text("Modern React Style", style: CommonStyle.title()),
         ],
       )
     );

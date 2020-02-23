@@ -17,7 +17,6 @@ class _Slide09 extends State<Slide09> {
       padding: EdgeInsets.all(10.0),
       child: Stack(
         children: <Widget>[
-          Text("Cons", style: CommonStyle.title(),),
           GestureDetector(
             child: Center(
               child: Column(
@@ -35,8 +34,12 @@ class _Slide09 extends State<Slide09> {
                   Text('  - 약간씩 부족한 오픈소스 라이브러리', style: (_animationIndex < 5)?CommonStyle.transparent():CommonStyle.common(),),
                   SizedBox(height: 5.0),
                   Text('  - 모바일 외에는 아직 Beta', style: (_animationIndex < 6)?CommonStyle.transparent():CommonStyle.common(),),
+                  SizedBox(height: 5.0),
+                  Text('  - FFI, Desktop...', style: (_animationIndex < 6)?CommonStyle.transparent():CommonStyle.common(),),
                   SizedBox(height: 15.0),
                   Text('결국에는 Native code 가 필요함', style: (_animationIndex < 7)?CommonStyle.transparent():CommonStyle.common(),),
+                  SizedBox(height: 15.0),
+                  Text('모바일 외의 다른 플랫폼까지 동시 지원하려면 복잡도가 상승', style: (_animationIndex < 8)?CommonStyle.transparent():CommonStyle.common(),),
                 ],
               )
             ),
@@ -44,6 +47,7 @@ class _Slide09 extends State<Slide09> {
               setState(() => _animationIndex++);
             },
           ),
+          Text("Cons", style: CommonStyle.title(),),
         ],
       )
     );

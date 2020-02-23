@@ -17,7 +17,6 @@ class _Slide07 extends State<Slide07> {
       padding: EdgeInsets.all(10.0),
       child: Stack(
         children: <Widget>[
-          Text("Platform Specific Code", style: CommonStyle.title(),),
           GestureDetector(
             child: Center(
               child: Row(
@@ -45,6 +44,7 @@ class _Slide07 extends State<Slide07> {
               setState(() => _animationIndex++);
             },
           ),
+          Text("Platform Specific Code", style: CommonStyle.title(),),
         ],
       )
     );
